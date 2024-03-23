@@ -19,8 +19,11 @@ pub fn build(b: *Builder) void {
     b.installArtifact(rediz);
     rediz.linkLibC();
     rediz.addCSourceFiles(&.{
-        "src/threads_mngr.c",
+        "src/ae.c",
+        "src/aof.c",
+        "src/sentinel.c",
         "src/server.c",
+        "src/threads_mngr.c",
     }, &.{
         "-std=c99",
         "-pedantic",
