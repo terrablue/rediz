@@ -1,4 +1,4 @@
-.*.swp
+*.swp
 *.o
 *.xo
 *.so
@@ -41,3 +41,4 @@ Makefile.dep
 .ccls-cache/*
 compile_commands.json
 redis.code-workspace
+zig-*
