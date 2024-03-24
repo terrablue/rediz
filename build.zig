@@ -7,6 +7,9 @@ pub fn build(b: *Builder) void {
     const hdr = b.dependency("hdr_histogram", .{
         .target = target,
     });
+    const hirediz = b.dependency("hirediz", .{
+        .target = target,
+    });
 
     const rediz = b.addExecutable(.{
         .name = "rediz",
@@ -14,7 +17,9 @@ pub fn build(b: *Builder) void {
         .root_source_file = .{ .path = "helper.zig" },
     });
     rediz.installLibraryHeaders(hdr.artifact("hdr_histogram"));
+    rediz.installLibraryHeaders(hirediz.artifact("hirediz"));
     rediz.linkLibrary(hdr.artifact("hdr_histogram"));
+    rediz.linkLibrary(hirediz.artifact("hirediz"));
 
     b.installArtifact(rediz);
     rediz.linkLibC();

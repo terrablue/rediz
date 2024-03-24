@@ -6,6 +6,10 @@
       .url = "https://github.com/terrablue/hdr_histogram/archive/6af5bccd9d52427a3a644dcb3ac901bd679342df.tar.gz",
       .hash = "1220b140de767c0cf561ed7971a479a9702c623bc3fddd6ccd2f60f38113d3f65abc"
     },
+    .hirediz = .{
+      .url = "https://github.com/terrablue/hirediz/archive/9eb7e4cd929c4fae62128254397201f875cbcf07.tar.gz",
+      .hash = "12204da7b2fa30d555df5041ad1a8224775009b4789de6cd0a3d62dd2fe4a9e21e14"
+    },
   },
 }
 
