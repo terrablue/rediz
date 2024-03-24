@@ -14,7 +14,15 @@ as much as possible
 * Move fast. Redis is working as is, so conservative changes that fix bugs and 
 maintain compatibility are preferred
 
+## Build
+
+Rediz requires zig master. To build, run `zig build`.
+
 Original Redis readme follows.
+
+## Help
+
+Join `#rediz` on `irc.libera.chat` for any questions.
 
 ---
 
