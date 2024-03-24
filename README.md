@@ -1,10 +1,8 @@
 What is ZKV?
 --------------
 
-Another Redis fork, because there haven't been enough lately.
-
-Seriously though: the goal of *this* fork is to slowly transition the Redis
-codebase to Zig, starting with moving from Make as a build system to `build.zig`,
+The goal of this project is to slowly transition the Redis codebase to Zig,
+starting with moving from Make as a build system to `build.zig`,
 and then slowly transitioning the code where it makes sense to Zig.
 
 Non goals: 
