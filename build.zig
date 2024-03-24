@@ -12,9 +12,8 @@ pub fn build(b: *std.Build) void {
     const fpconv = b.dependency("fpconv", .{
         .target = target,
     });
-    const ziglua = b.dependency("ziglua", .{
+    const zua = b.dependency("zua", .{
         .target = target,
-        .lang = .lua51,
     });
 
     const rediz = b.addExecutable(.{
@@ -25,10 +24,11 @@ pub fn build(b: *std.Build) void {
     rediz.installLibraryHeaders(hdr.artifact("hdr_histogram"));
     rediz.installLibraryHeaders(hirediz.artifact("hirediz"));
     rediz.installLibraryHeaders(fpconv.artifact("fpconv"));
+    rediz.installLibraryHeaders(zua.artifact("zua"));
     rediz.linkLibrary(hdr.artifact("hdr_histogram"));
     rediz.linkLibrary(hirediz.artifact("hirediz"));
     rediz.linkLibrary(fpconv.artifact("fpconv"));
-    rediz.linkLibrary(ziglua.artifact("lua"));
+    rediz.linkLibrary(zua.artifact("zua"));
 
     b.installArtifact(rediz);
     rediz.linkLibC();
@@ -61,6 +61,7 @@ pub fn build(b: *std.Build) void {
             "src/evict.c",
             "src/expire.c",
             "src/functions.c",
+            "src/function_lua.c",
             "src/geo.c",
             "src/geohash.c",
             "src/geohash_helper.c",
@@ -87,6 +88,7 @@ pub fn build(b: *std.Build) void {
             "src/object.c",
             "src/pqsort.c",
             "src/pubsub.c",
+            "src/rand.c",
             "src/rax.c",
             "src/rdb.c",
             "src/release.c",
@@ -96,7 +98,7 @@ pub fn build(b: *std.Build) void {
             "src/resp_parser.c",
             "src/rio.c",
             "src/quicklist.c",
-            //            "src/script_lua.c",
+            "src/script_lua.c",
             "src/script.c",
             "src/sds.c",
             "src/sentinel.c",

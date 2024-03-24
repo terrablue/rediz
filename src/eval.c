@@ -35,9 +35,9 @@
 #include "resp_parser.h"
 #include "script_lua.h"
 
-#include <lua.h>
-#include <lauxlib.h>
-#include <lualib.h>
+#include "lua.h"
+#include "lauxlib.h"
+#include "lualib.h"
 #include <ctype.h>
 #include <math.h>
 

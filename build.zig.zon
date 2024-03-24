@@ -19,5 +19,9 @@
             .url = "https://github.com/natecraddock/ziglua/archive/4a5f946a61b5f2ad699f27b2676fff24c5955e92.tar.gz",
             .hash = "12208c500b5186b2bf8213c9a67d6ee60cbad984f7a1f77cbd8e9ab9a719b58f9fa5",
         },
+        .zua = .{
+            .url = "https://github.com/terrablue/zua/archive/56886239c28d527e0742aa90c0c987b6c785c87f.tar.gz",
+            .hash = "1220c4ca1fa2e535f48fa81d5f08b1aad63859ab6268c6dd0f6cb398979b78b70035",
+        },
     },
 }
