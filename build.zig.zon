@@ -10,6 +10,10 @@
       .url = "https://github.com/terrablue/hirediz/archive/9eb7e4cd929c4fae62128254397201f875cbcf07.tar.gz",
       .hash = "12204da7b2fa30d555df5041ad1a8224775009b4789de6cd0a3d62dd2fe4a9e21e14"
     },
+    .fpconv = .{
+      .url = "https://github.com/terrablue/fpconv/archive/3e295a40791a5fb5f0bec38f7e65966cf2e721f3.tar.gz",
+      .hash = "12203bd05ceef5feadaf8d1d3d7aa348df79bb9641ae864a2ecaa8c31c7c57473f8d"
+    }
   },
 }
 
