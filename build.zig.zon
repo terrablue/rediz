@@ -15,10 +15,6 @@
             .url = "https://github.com/terrablue/fpconv/archive/9895b387846320fde44ef98096434abc2040c62c.tar.gz",
             .hash = "1220a7580726329fa5b1a8b0113b926a13e5988abe229981d09080a0ccea96d8c49f",
         },
-        .ziglua = .{
-            .url = "https://github.com/natecraddock/ziglua/archive/4a5f946a61b5f2ad699f27b2676fff24c5955e92.tar.gz",
-            .hash = "12208c500b5186b2bf8213c9a67d6ee60cbad984f7a1f77cbd8e9ab9a719b58f9fa5",
-        },
         .zua = .{
             .url = "https://github.com/terrablue/zua/archive/56886239c28d527e0742aa90c0c987b6c785c87f.tar.gz",
             .hash = "1220c4ca1fa2e535f48fa81d5f08b1aad63859ab6268c6dd0f6cb398979b78b70035",

@@ -18,11 +18,13 @@ maintain compatibility are preferred
 
 Rediz requires zig master. To build, run `zig build`.
 
-Original Redis readme follows.
-
 ## Help
 
 Join `#rediz` on `irc.libera.chat` for any questions.
+
+---
+
+Original Redis readme follows.
 
 ---
 
