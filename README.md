@@ -1,4 +1,4 @@
-What is Rediz?
+What is ZKV?
 --------------
 
 Another Redis fork, because there haven't been enough lately.
@@ -8,7 +8,7 @@ codebase to Zig, starting with moving from Make as a build system to `build.zig`
 and then slowly transitioning the code where it makes sense to Zig.
 
 Non goals: 
-* Rename everything to `rediz`. We'll try to keep internally the name `redis`
+* Rename everything to `zkv`. We'll try to keep internally the name `redis`
 as much as possible
 * Break license compatibility with BSD/MIT
 * Move fast. Redis is working as is, so conservative changes that fix bugs and 
@@ -16,11 +16,11 @@ maintain compatibility are preferred
 
 ## Build
 
-Rediz requires zig master. To build, run `zig build`.
+ZKV requires zig master. To build, run `zig build`.
 
 ## Help
 
-Join `#rediz` on `irc.libera.chat` for any questions.
+Join `#zkv` on `irc.libera.chat` for any questions.
 
 ---
 

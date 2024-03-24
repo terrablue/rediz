@@ -16,23 +16,31 @@ pub fn build(b: *std.Build) void {
         .target = target,
     });
 
-    const rediz = b.addExecutable(.{
-        .name = "rediz",
+    const flags = [_][]const u8{
+        "-std=c99",
+        "-pedantic",
+        "-Wall",
+        "-W",
+        "-Wno-missing-field-initializers",
+    };
+
+    const zkv = b.addExecutable(.{
+        .name = "zkv",
         .target = target,
         .root_source_file = .{ .path = "helper.zig" },
     });
-    rediz.installLibraryHeaders(hdr.artifact("hdr_histogram"));
-    rediz.installLibraryHeaders(hirediz.artifact("hirediz"));
-    rediz.installLibraryHeaders(fpconv.artifact("fpconv"));
-    rediz.installLibraryHeaders(zua.artifact("zua"));
-    rediz.linkLibrary(hdr.artifact("hdr_histogram"));
-    rediz.linkLibrary(hirediz.artifact("hirediz"));
-    rediz.linkLibrary(fpconv.artifact("fpconv"));
-    rediz.linkLibrary(zua.artifact("zua"));
+    zkv.installLibraryHeaders(hdr.artifact("hdr_histogram"));
+    zkv.installLibraryHeaders(hirediz.artifact("hirediz"));
+    zkv.installLibraryHeaders(fpconv.artifact("fpconv"));
+    zkv.installLibraryHeaders(zua.artifact("zua"));
+    zkv.linkLibrary(hdr.artifact("hdr_histogram"));
+    zkv.linkLibrary(hirediz.artifact("hirediz"));
+    zkv.linkLibrary(fpconv.artifact("fpconv"));
+    zkv.linkLibrary(zua.artifact("zua"));
 
-    b.installArtifact(rediz);
-    rediz.linkLibC();
-    rediz.addCSourceFiles(.{
+    b.installArtifact(zkv);
+    zkv.linkLibC();
+    zkv.addCSourceFiles(.{
         .files = &.{
             "src/acl.c",
             "src/adlist.c",
@@ -131,12 +139,6 @@ pub fn build(b: *std.Build) void {
             "src/zipmap.c",
             "src/zmalloc.c",
         },
-        .flags = &.{
-            "-std=c99",
-            "-pedantic",
-            "-Wall",
-            "-W",
-            "-Wno-missing-field-initializers",
-        },
+        .flags = &flags,
     });
 }
